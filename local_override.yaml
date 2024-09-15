@@ -193,6 +193,7 @@ proxy-groups:
     name: MicroSoft
     type: select
     proxies:
+      - DIRECT
       - PROXY
       - HK
       - JP
@@ -204,6 +205,7 @@ proxy-groups:
     name: JetBrains
     type: select
     proxies:
+      - DIRECT
       - PROXY
       - HK
       - JP
