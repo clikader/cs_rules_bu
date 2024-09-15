@@ -1,0 +1,260 @@
+# From https://github.com/mihomo-party-org/override-hub/blob/main/yaml/%E5%B8%83%E4%B8%81%E7%8B%97%E7%9A%84%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2.yaml
+
+rule-providers:
+  private:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_domain:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml
+    path: ./ruleset/cn_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  telegram_domain:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml
+    path: ./ruleset/telegram_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  geolocation-!cn:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  emby_domain:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/clikader/ACL4SSR_AZURE/master/Clash/emby_domains.yaml
+    path: ./ruleset/emby_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  emby_ip:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/clikader/ACL4SSR_AZURE/master/Clash/emby_ips.yaml
+    path: ./ruleset/emby_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  cn_ip:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml
+    path: ./ruleset/cn_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  telegram_ip:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml
+    path: ./ruleset/telegram_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  google_ip:
+  microsoft:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./ruleset/microsoft.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  bing:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml
+    path: ./ruleset/bing.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  copilot:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
+    path: ./ruleset/copilot.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  claude:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
+    path: ./ruleset/claude.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  bard:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml
+    path: ./ruleset/bard.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  openai:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/openai.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  steam:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml
+    path: ./ruleset/steam.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  jetbrains:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/rule/Clash/Jetbrains/Jetbrains.yaml
+    path: ./ruleset/jetbrains.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+
+proxy-groups:
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: PROXY
+    type: select
+    proxies:
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+      - EU
+      - AUTO
+      - MANUAL
+  # Area Groups
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)hk|HongKong|香港|Hong Kong|HK|🇭🇰
+    name: HK
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)新加坡|Singapore|狮城|SG|🇸🇬
+    name: SG
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)日本|Japan|东京|大阪|JP|🇯🇵
+    name: JP
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)美国|USA|US|United States|🇺🇸
+    name: US
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)台湾|新北|彰化|TW|Taiwan|🇹🇼
+    name: TW
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)TR|GB|FR|UK|DE|Germany|Turkey|Netherlands|Italy|France|Great Britain|Ukraine|Argentina|[^-]德|[^-]英|土耳其|法国|荷兰|阿根廷|丹麦|挪威|瑞典|芬兰|冰岛|瑞士|捷克|希腊|波兰|黑山|乌克兰|卢森堡|匈牙利|意大利|🇪🇺
+    name: EU
+    type: select
+  # Area Groups End
+
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Manual.png
+    include-all: true
+    name: MANUAL
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: AUTO
+    type: url-test
+    interval: 300
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Emby.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    name: EMBY
+    type: select
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+    name: AI
+    type: select
+    proxies:
+      - PROXY
+      - SG AUTO
+      - JP AUTO
+      - US AUTO
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png
+    name: MicroSoft
+    type: select
+    proxies:
+      - PROXY
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+      - EU
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/JetBrains/logos/master/web/jetbrains/apple-touch-icon.png
+    name: JetBrains
+    type: select
+    proxies:
+      - PROXY
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+      - EU
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
+    name: Telegram
+    type: select
+    proxies:
+      - PROXY
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+      - EU
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    proxies:
+      - PROXY
+      - HK
+      - JP
+      - US
+      - SG
+      - TW
+      - EU
+      - AUTO
+    name: GLOBAL
+    type: select
+
+rules:
+  - "RULE-SET,private,DIRECT"
+  - "RULE-SET,emby_domain,EMBY"
+  - "RULE-SET,emby_ip,EMBY"
+  - "RULE-SET,bing,AI"
+  - "RULE-SET,copilot,AI"
+  - "RULE-SET,bard,AI"
+  - "RULE-SET,openai,AI"
+  - "RULE-SET,claude,AI"
+  - "RULE-SET,steam,PROXY"
+  - "RULE-SET,microsoft,MicroSoft"
+  - "RULE-SET,jetbrains,JetBrains"
+  - "RULE-SET,telegram_domain,Telegram"
+  - "RULE-SET,telegram_ip,Telegram"
+  - "RULE-SET,geolocation-!cn,PROXY"
+  - "RULE-SET,cn_domain,DIRECT"
+  - "RULE-SET,cn_ip,DIRECT"
+  - "MATCH,PROXY"
