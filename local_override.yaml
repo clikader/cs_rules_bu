@@ -31,14 +31,14 @@ rule-providers:
     type: http
   emby_domain:
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/clikader/ACL4SSR_AZURE/master/Clash/emby_domains.yaml
-    path: ./ruleset/emby_domain.yaml
+    path: ./ruleset/emby_domains.yaml
     behavior: domain
     interval: 86400
     format: yaml
     type: http
   emby_ip:
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/clikader/ACL4SSR_AZURE/master/Clash/emby_ips.yaml
-    path: ./ruleset/emby_ip.yaml
+    path: ./ruleset/emby_ips.yaml
     behavior: ipcidr
     interval: 86400
     format: yaml
