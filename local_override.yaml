@@ -115,7 +115,7 @@ rule-providers:
     type: http
 
 proxy-groups:
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Teslamate_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Teslamate_A.png
     name: PROXY
     type: select
     proxies:
@@ -166,22 +166,22 @@ proxy-groups:
     type: select
   # Area Groups End
 
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Miniflux_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Miniflux_A.png
     include-all: true
     name: MANUAL
     type: select
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Teslamate_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Teslamate_A.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: AUTO
     type: url-test
     interval: 300
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Emby_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Emby_A.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: EMBY
     type: select
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Chatgpt_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Chatgpt_A.png
     name: AI
     type: select
     proxies:
@@ -189,7 +189,7 @@ proxy-groups:
       - SG
       - JP
       - US
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Azure_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Azure_A.png
     name: MicroSoft
     type: select
     proxies:
@@ -201,7 +201,7 @@ proxy-groups:
       - SG
       - TW
       - EU
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Pycharm_B.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Pycharm_B.png
     name: JetBrains
     type: select
     proxies:
@@ -213,7 +213,7 @@ proxy-groups:
       - SG
       - TW
       - EU
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Telegram_B.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Telegram_B.png
     name: Telegram
     type: select
     proxies:
@@ -224,7 +224,7 @@ proxy-groups:
       - SG
       - TW
       - EU
-  - icon: https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Googleearth_A.png
+  - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Googleearth_A.png
     name: GLOBAL
     type: select
     include-all: true
