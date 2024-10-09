@@ -36,20 +36,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  bing:
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml
-    path: ./ruleset/bing.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
-  copilot:
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
-    path: ./ruleset/copilot.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   claude:
     url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
     path: ./ruleset/claude.yaml
@@ -153,6 +139,8 @@ proxy-groups:
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: EMBY
     type: select
+    proxies:
+      - PROXY
   - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/xushier/HD-Icons/main/border-radius/Chatgpt_A.png
     name: AI
     type: select
@@ -189,9 +177,24 @@ proxy-groups:
       - AUTO
 
 rules:
+  # Robo
+  - DOMAIN-SUFFIX,668918.xyz,EMBY
+  - DOMAIN-SUFFIX,656888.xyz,DIRECT
+  # 守候
+  - DOMAIN-SUFFIX,cn2gias.uk,EMBY
+  # 蘑菇
+  - DOMAIN-SUFFIX,vban.xyz,EMBY
+  # HXD
+  - DOMAIN-SUFFIX,as174.com,EMBY
+  - DOMAIN-SUFFIX,bili.rip,EMBY
+  # MICU
+  - DOMAIN,tv.micu.hk,DIRECT
+  - DOMAIN,tv1.micu.hk,DIRECT
+  - DOMAIN,media.micu.hk,EMBY
+  # Misakaf
+  - DOMAIN,emby.misakaf.org,EMBY
+  # Rulesets
   - "RULE-SET,private,DIRECT"
-  - "RULE-SET,bing,AI"
-  - "RULE-SET,copilot,AI"
   - "RULE-SET,bard,AI"
   - "RULE-SET,openai,AI"
   - "RULE-SET,claude,AI"
