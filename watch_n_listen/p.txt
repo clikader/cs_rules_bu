@@ -1,0 +1,24 @@
+# Shouhou
+DOMAIN,pe.cn2gias.uk
+
+# 蘑菇
+DOMAIN,wf.vban.xyz
+DOMAIN,wf.mooguu.xyz
+
+# MICU
+DOMAIN,media.micu.hk
+
+# 喜鹊
+DOMAIN-SUFFIX,023168.xyz
+DOMAIN,4.v4v223789.sxfwvxg1.223789.xyz
+
+# Mefun
+DOMAIN,cfgtv.ii00.cc
+DOMAIN,wgtv.ii00.cc
+
+# Mefun Porn
+DOMAIN,cfptv.ii00.cc
+DOMAIN,wptv.ii00.cc
+
+# Mefun Music
+DOMAIN,music.mefun.vip
